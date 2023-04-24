@@ -1,0 +1,318 @@
+/* default styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root {
+    --color-primary: #4070af;
+    --color-success: #25d366;
+    --color-warning: #ffb900;
+    --color-danger: #f77737;
+    --color-danger-variant: #rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: #f6f7f8;
+    --color-black: #000;
+    --color-bg:#0a1620;
+    --color-bg1: #092234;
+    --color-bg2: #355c7d;
+
+    --container-width-lg: 89%;
+    --container-width-md: 92%;
+    --container-width-sm: 90%;
+
+    --transition: all 400ms ease;
+}
+body {
+    font-family:"Montserrat", sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    background-color: var(--color-bg);
+}
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+section {
+    padding: 6rem 0;
+}
+section h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+}
+h1 {
+    font-size: 2.4rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1.3rem;
+}
+a {
+    color: var(--color-white);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+a:hover {
+    color: var(--color-bg2);
+}
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.btn {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+.btn1 {
+    font-family:"Montserrat", sans-serif;
+}
+.btn:hover {
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.btn-primary {
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+/* default styles end*/
+.header-two-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.444);
+    padding: 2rem 1.5rem 2rem;
+    width: 70%;
+}
+main {
+    background-image: url("../images/slide\ 1.jpg");
+}
+/* contacts styling */
+.btns {
+    display: flex;
+    gap: 3rem;
+}
+.contact-container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 32rem;
+    margin: 5rem auto;
+    border-radius: 1rem;
+}
+/* contacts styling ends*/
+
+
+/* aside styling */
+.contact-aside {
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 8rem;
+    height: 100%;
+}
+.aside-img {
+    width: 80%;
+    height: 40%;
+    margin-bottom: 2rem;
+}
+.contact-aside h2 {
+    text-align: left;
+    margin-bottom: 0rem;
+    margin-top: 0;
+}
+.contact-aside p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+.contact-details li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.contact-socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.contact-socials a {
+    background: var(--color-bg);
+    padding: 0.5rem 0.6rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+.contact-socials a:hover {
+    background: transparent;
+}
+
+/* aside styling ends */
+
+/* form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+.form-name {
+    display: flex;
+    gap: 1.2rem;
+}
+.contact-form input[type="text"] {
+    width: 50%;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+.contact-form .btn {
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+/* form styling ends */
+
+
+/* =========media queries for tablet====*/
+@media screen and (max-width:1024px){
+.contact-info {
+    padding: 2rem 1.5rem 2rem;
+    width: 85%;
+}
+/* contact media query styling */
+    .contact-socials {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+    .contact-container {
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+    .contact-aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+    .contact-form {
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+    /* contact media query styling */
+}
+@media screen and (max-width:900px) {
+    .contact-container {
+        grid-template-columns: 50% 50%;
+        gap: 1.7rem;
+    }
+    .form-name {
+        flex-direction: column;
+    }
+    .form-name input[type="text"] {
+        width: 100%;
+    }
+}
+/* =========media queries for mobile phones====*/
+
+@media screen and (max-width:600px) {
+    .btn1 {
+        padding: 1rem;
+        font-family:"Montserrat", sans-serif;
+    }
+    .aside-img {
+        width: 80%;
+        height: 30%;
+        margin-bottom: 2rem;
+    }
+    .contact-info {
+        padding: 2rem 1.5rem 2rem;
+        width: 90%;
+    }
+    /* contact media query styling */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+        padding: 0;
+    }
+    .contact-aside {
+        height: 90%;
+        width: 80%;
+        margin: auto;
+    }
+    .contact-form {
+        margin: 0 1.5rem 2rem;
+    }
+    .form-name {
+        flex-direction: column;
+    }
+    .form-name input[type="text"] {
+        width: 100%;
+    }
+    /* contact media query styling */
+}
+
+@media screen and (max-width:430px) {
+    .navmenu {
+        right: 0%;
+    }
+}
+@media screen and (max-width:370px) {
+    /* contact media query styling */
+    .contact-container {
+        gap: 1rem;
+        padding: 1rem;
+        width: fit-content;
+    }
+    .contact-aside {
+        height: 90%;
+        width: 100%;
+        margin: 0;
+    }
+    .aside-img {
+        height: 30%;
+    }
+    .contact-form {
+        margin: 0;
+        width: 100%;
+        padding: 6px;
+        gap: 3rem;
+    }
+    .form-name {
+        flex-direction: column;
+        padding: 2px;
+        gap: 3rem;
+    }
+    .form-name input[type="text"] {
+        width: 100%;
+    }
+    /* contact media query styling */
+}
