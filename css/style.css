@@ -518,7 +518,7 @@ footer ul li a:hover {
         top: 5rem;
         right: 5%;
         height: fit-content;
-        width: 25rem;
+        width: 70%;
         flex-direction: column;
         gap: 0;
         display: none;
@@ -649,7 +649,8 @@ footer ul li a:hover {
     /* sliders */
     /* ======navbar===== */
     .navmenu {
-        right: 3%;
+        right: 0%;
+        width: 100%;
     }
     #openmenubtn, #closemenubtn {
         right: 5%;
